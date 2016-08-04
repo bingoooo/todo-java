@@ -7,11 +7,8 @@
  *
  */
 public class Task {
-	/*
-	 * @param
-	 */
-	public String label = "New Task";
-	public Boolean state = Boolean.FALSE;
+	private String label = "New Task";
+	private Boolean state = Boolean.FALSE;
 	
 	/*
 	 * Default Constructor
@@ -22,6 +19,8 @@ public class Task {
 	
 	/*
 	 * Custom Constructor
+	 * @param label Task name
+	 * @param st Task status
 	 */
 	public Task(String lbl, Boolean st){
 		this.label = lbl;
@@ -30,33 +29,37 @@ public class Task {
 	
 	/*
 	 * Returns a string
+	 * @return Returns Task name and status
 	 */
 	public String toString(){
-		String toString = "";
-		return toString;
+		return "Tâche '" + this.label + " => " + this.state;
 	}
 	
 	/*
 	 * Put the Task status to "done" (true)
 	 */
 	public void done(){
-		// TODO : Code when a task is completed
+		this.state = true;
 	}
 	
 	/*
 	 * Returns the Tasks status
+	 * @return Returns status true/false
 	 */
 	public Boolean isDone(){
-		Boolean isDone = Boolean.FALSE;
-		return isDone;
+		return this.state;
 	}
 	
-	// Method that returns the Task label
+	/* Method that returns the Task label
+	 * @return Returns Task.label property
+	 */
 	public String getLabel(){
 		return this.label;
 	}
 	
-	// Method that sets the Task label
+	/* Method that sets the Task label
+	 * @param newLabel String that will replace the previous label
+	 */
 	public void setLabel(String newLabel){
 		this.label = newLabel;
 	}

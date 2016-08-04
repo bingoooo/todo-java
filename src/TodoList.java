@@ -19,8 +19,16 @@ public class TodoList {
 		Task t2 = new Task();
 		
 		// System Console output
-		System.out.println("Tâche '" + t.label + "' => " + t.state);
-		System.out.printf("Tâche '%s' => '%s'", t2.label, t2.state);
+		System.out.println(t);
+		System.out.println(t2);
+		t.done();
+		System.out.println(t);
+		
+		if(t.isDone()) {
+			System.out.println("Task is Done !!");
+		} else {
+			System.out.println("Task is TO DO !!");
+		}
 		
 	}
 }
