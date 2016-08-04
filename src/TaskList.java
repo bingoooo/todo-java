@@ -1,5 +1,5 @@
 /**
- * 
+ * Task List class not yet used
  */
 
 /**

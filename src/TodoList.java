@@ -1,5 +1,5 @@
 /**
- * 
+ * Todo List Main class
  */
 
 /**
@@ -11,16 +11,16 @@ public class TodoList {
 	/**
 	 * @param args
 	 */
+	
+	// Application main entry method
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// Calls to Task class to create newtask		
+		Task t = new Task("Test", false);
+		Task t2 = new Task();
 		
-		Task t = new Task();
-		
-		t.label = "Test";
-		t.state = false;
-		
+		// System Console output
 		System.out.println("Tâche '" + t.label + "' => " + t.state);
-
+		System.out.printf("Tâche '%s' => '%s'", t2.label, t2.state);
+		
 	}
-
 }
