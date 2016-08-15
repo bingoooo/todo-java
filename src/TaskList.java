@@ -14,8 +14,28 @@ public class TaskList {
 		super();
 	}
 	
-	public void addTask() {
+	/*
+	 * Add a Task
+	 * @param newTask Task to add
+	 * @return <ul>
+	 * 		<li> true : task have been added</li>
+	 * 		<li> false : task hasn't been added</li>
+	 * 		</ul>
+	 */
+	public Boolean addTask(Task newTask) {
+		if (nbTasks == 10){
+			String label = newTask.getLabel();
+			System.out.println("No more space  to insert : " + label);
+			return false;
+		} else {
+			tasks[nbTasks++] = newTask;
+			return true;
+		}
+	}
+	public Boolean addTask(String label){
+		Task newTask = new Task(label);
 		
+		return addTask(newTask);
 	}
 	
 	public Boolean taskDone() {

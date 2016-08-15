@@ -22,9 +22,9 @@ public class Task {
 	 * @param label Task name
 	 * @param st Task status
 	 */
-	public Task(String lbl, Boolean st){
+	public Task(String lbl){
 		this.label = lbl;
-		this.state = st;
+		this.state = false;
 	}
 	
 	/*

@@ -14,21 +14,22 @@ public class TodoList {
 	
 	// Application main entry method
 	public static void main(String[] args) {
-		// Calls to Task class to create newtask		
-		Task t = new Task("Test", false);
-		Task t2 = new Task();
+		// Calls to Task class to create newtask
+		TaskList list = new TaskList();
 		
-		// System Console output
-		System.out.println(t);
-		System.out.println(t2);
-		t.done();
-		System.out.println(t);
+		list.addTask("Test 1");
+		list.addTask("Test 2");
+		list.addTask("Test 3");
+		list.addTask("Test 4");
+		list.addTask("Test 5");
+		list.addTask("Test 6");
+		list.addTask("Test 7");
+		list.addTask("Test 8");
+		list.addTask("Test 9");
+		list.addTask("Test 10");
+		list.addTask("Test 11");
+		list.addTask("Test 12");
 		
-		if(t.isDone()) {
-			System.out.println("Task is Done !!");
-		} else {
-			System.out.println("Task is TO DO !!");
-		}
-		
+		System.out.println(list);
 	}
 }
